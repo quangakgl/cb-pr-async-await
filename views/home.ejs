@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dsd</title>
+    <script type="text/javascript">
+        let add = (a,b) => {
+            return new Promise((resolve,reject) => {
+                setTimeout(() => {
+                    if (typeof a != "number" || typeof b != "number"){
+                        return reject(new Error("tham so truyen vao phai la 1 so"))
+                    }
+                    resolve(a+b);
+                }, 2000);
+            });
+        }
+//        let a = add(4,'5')
+//            .then(result => {
+//                console.log('then thu nhat la '+result)
+//                return 'Ket qua '+result
+//            },err => {
+//                console.log(err+'')
+//                return 'loi' + err
+//            })
+//            .then((b) => console.log('thanh cong roi' + b));
+//        console.log(a);
+//        setTimeout(() => console.log(a),2500);
+        let pr = Promise.reject('bi loi')
+        pr.catch(e => console.log(e + ''))
+        console.log(pr)
+    </script>
+</head>
+<body>
+<p>Quang đẹp trai quá đi =)))</p>
+</body>
+</html>
